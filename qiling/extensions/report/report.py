@@ -35,7 +35,7 @@ class WindowsReport(Report):
         self.teb_address = ql.loader.TEB.base
         self.peb_address = ql.loader.PEB.base
         self.ldr_address = ql.loader.LDR.base
-        self.api = ql.os.syscalls
+        self.api = ql.os.utils.syscalls
         self.registries = {}
         for key, values in ql.os.registry_manager.accessed.items():
             self.registries[key] = values
